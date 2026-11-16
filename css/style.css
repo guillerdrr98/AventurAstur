@@ -312,6 +312,8 @@ footer {
 /* BREAKPOINT: Más de 992px (3 columnas) */
 @media screen and (min-width: 992px) {
   .localizaciones {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
   }
 }
