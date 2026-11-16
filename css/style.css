@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #283618;
+  color: #fefae0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita barras de scroll horizontal no deseadas */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* ==========================================
+   ESTILOS SECCIÓN HERO (VÍDEO A PANTALLA COMPLETA)
+   ========================================== */
+.seccion-video {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.65); /* Oscurece el vídeo para que resalte el texto */
+}
+
+.capa-superpuesta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Capa oscura sutil */
+  z-index: 2;
+}
+
+/* Barra de navegación flotante, orientada a la derecha y sin celdas/bordes */
+.navbar {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  z-index: 10;
+  border: none;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar li {
+  border: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fefae0;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.navbar li:hover {
+  color: #dda15e;
+}
+
+/* Título de la cabecera superpuesto en el centro del vídeo */
+.cabecera {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;     /* Centra horizontalmente */
+  text-align: center;
+  z-index: 5;
+  padding: 20px;
+}
+
+.cabecera h1 {
+  font-size: 3rem;
+  color: #fefae0;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.cabecera p {
+  font-size: 1.2rem;
+  color: #dda15e;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   ESTILOS SECCIÓN INICIO (Debajo del vídeo)
+   ========================================== */
+.seccion-inicio {
+  background-color: #606c38;
+  border: 2px solid #dda15e;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+
+.seccion-inicio h2 {
+  font-size: 1rem;
+  background-color: #bc6c25;
+  color: #fefae0;
+  padding: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: 1px solid #dda15e;
+}
+
+.inicio-contenido p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #fefae0;
+}
+
+/* ==========================================
+   ESTILOS SECCIÓN LOCALIZACIONES (Grid / Flex)
+   ========================================== */
+.seccion-localizaciones {
+  margin-bottom: 12px;
+}
+
+.seccion-localizaciones > h2 {
+  font-size: 1rem;
+  background-color: #bc6c25;
+  color: #fefae0;
+  padding: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: 2px solid #dda15e;
+}
+
+.localizaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Aseguramos que la tarjeta sea un contenedor flexible para alinear sus elementos */
+.zona {
+  background-color: #606c38;
+  border: 2px solid #dda15e;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Empuja el contenido uniformemente */
+}
+
+/* Forzamos una altura fija o mínima en el título para que todas las cajas midan exactamente lo mismo aunque tengan 1 o 2 líneas */
+.zona h2 {
+  font-size: 1rem;
+  background-color: #bc6c25;
+  color: #fefae0;
+  padding: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  
+  /* NUEVOS CAMBIOS PARA ALINEAR PERFECTAMENTE */
+  height: 52px; /* Altura suficiente para albergar 2 líneas de texto perfectamente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  overflow: hidden; /* Evita que las imágenes sobresalgan del contenedor */
+}
+
+.imagen img {
+  height: 250px; /* Altura equilibrada para que encaje mejor con los textos y vídeos */
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  flex: 1; /* Si hay dos imágenes (ej. Oviedo/Avilés), se reparten el espacio 50% y 50% de forma automática */
+}
+
+.info h3 {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  color: #dda15e;
+}
+
+.info p {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  color: #fefae0;
+}
+
+.rodaje {
+  font-style: italic;
+  color: #dda15e;
+  font-weight: bold;
+}
+
+.video-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* ==========================================
+   ESTILOS SECCIÓN CONTACTO / INSCRIPCIÓN
+   ========================================== */
+.seccion-contacto {
+  margin-bottom: 12px;
+}
+
+.seccion-contacto h2 {
+  font-size: 1rem;
+  background-color: #bc6c25;
+  color: #fefae0;
+  padding: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: 2px solid #dda15e;
+}
+
+.form-contacto {
+  background-color: #606c38;
+  border: 2px solid #dda15e;
+  padding: 15px;
+}
+
+.form-intro {
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  color: #fefae0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: #dda15e;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 8px;
+  font-size: 0.8rem;
+  background-color: #283618;
+  color: #fefae0;
+  border: 1px solid #dda15e;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #b5c99a;
+}
+
+.btn-enviar {
+  width: 100%;
+  background-color: #bc6c25;
+  color: #fefae0;
+  border: 2px solid #dda15e;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-enviar:hover {
+  background-color: #dda15e;
+  color: #283618;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #fefae0;
+  background-color: #606c38;
+  padding: 15px;
+  border: 2px solid #dda15e;
+}
+
+/* ==========================================
+   MEDIA QUERIES (Responsive)
+   ========================================== */
+
+/* BREAKPOINT: De 576px a 992px (2 columnas) */
+@media screen and (min-width: 576px) {
+  .localizaciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+/* BREAKPOINT: Más de 992px (3 columnas) */
+@media screen and (min-width: 992px) {
+  .localizaciones {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
