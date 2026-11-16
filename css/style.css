@@ -303,14 +303,31 @@ body {
 }
 
 /* FOOTER */
-footer {
-  text-align: center;
+.footer-grid {
   margin-top: 15px;
   font-size: 0.8rem;
   color: #fefae0;
   background-color: #606c38;
-  padding: 15px;
+  padding: 15px 25px;
   border: 2px solid #dda15e;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-der {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-der img {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* MEDIA QUERIES (Responsive) */
@@ -346,5 +363,21 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-izq {
+    text-align: left;
+  }
+
+  .footer-centro {
+    text-align: center;
+  }
+
+  .footer-der {
+    justify-content: flex-end;
   }
 }
