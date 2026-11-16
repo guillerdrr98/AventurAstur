@@ -20,14 +20,11 @@ body {
   padding: 10px;
 }
 
-/* ==========================================
-   ESTILOS SECCIÓN HERO (VÍDEO A PANTALLA COMPLETA)
-   ========================================== */
+/* ESTILOS SECCIÓN VIDEO (VÍDEO A PANTALLA COMPLETA) */
 .seccion-video {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  margin-left: calc(-50vw + 50%);
+  width: 100%; /* Ocupa el 100% del body de forma nativa */
+  height: 100vh; /* Altura completa de la pantalla */
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -90,8 +87,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra verticalmente */
-  align-items: center;     /* Centra horizontalmente */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   z-index: 5;
   padding: 20px;
@@ -111,9 +108,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ==========================================
-   ESTILOS SECCIÓN INICIO (Debajo del vídeo)
-   ========================================== */
+/* ESTILOS SECCIÓN INICIO (Debajo del vídeo) */
 .seccion-inicio {
   background-color: #606c38;
   border: 2px solid #dda15e;
@@ -138,9 +133,7 @@ body {
   color: #fefae0;
 }
 
-/* ==========================================
-   ESTILOS SECCIÓN LOCALIZACIONES (Grid / Flex)
-   ========================================== */
+/* ESTILOS SECCIÓN LOCALIZACIONES (Grid / Flex) */
 .seccion-localizaciones {
   margin-bottom: 12px;
 }
@@ -181,8 +174,7 @@ body {
   text-align: center;
   margin-bottom: 10px;
   font-weight: bold;
-  
-  /* NUEVOS CAMBIOS PARA ALINEAR PERFECTAMENTE */
+
   height: 52px; /* Altura suficiente para albergar 2 líneas de texto perfectamente */
   display: flex;
   align-items: center;
@@ -199,7 +191,7 @@ body {
 }
 
 .imagen img {
-  height: 250px; /* Altura equilibrada para que encaje mejor con los textos y vídeos */
+  height: 250px;
   width: 100%;
   object-fit: cover;
   display: block;
@@ -236,9 +228,7 @@ body {
   border: none;
 }
 
-/* ==========================================
-   ESTILOS SECCIÓN CONTACTO / INSCRIPCIÓN
-   ========================================== */
+/* ESTILOS SECCIÓN CONTACTO / INSCRIPCIÓN */
 .seccion-contacto {
   margin-bottom: 12px;
 }
@@ -261,7 +251,7 @@ body {
 }
 
 .form-intro {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   margin-bottom: 12px;
   color: #fefae0;
   text-align: center;
@@ -288,7 +278,6 @@ body {
   background-color: #283618;
   color: #fefae0;
   border: 1px solid #dda15e;
-  outline: none;
 }
 
 .form-group input::placeholder,
@@ -324,9 +313,7 @@ footer {
   border: 2px solid #dda15e;
 }
 
-/* ==========================================
-   MEDIA QUERIES (Responsive)
-   ========================================== */
+/* MEDIA QUERIES (Responsive) */
 
 /* BREAKPOINT: De 576px a 992px (2 columnas) */
 @media screen and (min-width: 576px) {
