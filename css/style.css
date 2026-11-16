@@ -270,11 +270,6 @@ body {
   border: 1px solid #dda15e;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #b5c99a;
-}
-
 .btn-enviar {
   width: 100%;
   background-color: #bc6c25;
