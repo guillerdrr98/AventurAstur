@@ -40,13 +40,28 @@ body {
   filter: brightness(0.65); /* Oscurece el vídeo para que resalte el texto */
 }
 
-/* Barra de navegación flotante, orientada a la derecha y sin celdas/bordes */
-.navbar {
+/* Barra superior flotante maquetada con Grid (Logo izquierda + Navbar derecha) */
+.barra-superior {
   position: absolute;
   top: 25px;
+  left: 40px;
   right: 40px;
   z-index: 10;
-  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-superior {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fefae0;
+  letter-spacing: 1.5px;
+}
+
+.navbar {
+  justify-self: end; /* Empuja el menú de navegación estrictamente hacia la esquina derecha */
 }
 
 .navbar ul {
@@ -306,6 +321,22 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-izq {
+    text-align: left;
+  }
+
+  .footer-centro {
+    text-align: center;
+  }
+
+  .footer-der {
+    justify-content: flex-end;
   }
 }
 
