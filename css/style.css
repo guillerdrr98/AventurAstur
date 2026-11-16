@@ -40,16 +40,6 @@ body {
   filter: brightness(0.65); /* Oscurece el vídeo para que resalte el texto */
 }
 
-.capa-superpuesta {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Capa oscura sutil */
-  z-index: 2;
-}
-
 /* Barra de navegación flotante, orientada a la derecha y sin celdas/bordes */
 .navbar {
   position: absolute;
