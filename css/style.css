@@ -315,7 +315,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  text-align: left;
 }
 
 .info-contacto-bloque {
@@ -340,7 +339,7 @@ body {
   margin-bottom: 4px;
 }
 
-.telefono-destacado {
+.msg-destacado {
   font-weight: bold;
 }
 
