@@ -37,17 +37,29 @@
       <main>
         <!-- APARTADO INICIO (Debajo del vídeo a pantalla completa) -->
         <section id="inicio" class="seccion-inicio">
-          <h2>Inicio</h2>
-          <div class="inicio-contenido">
-            <p>
-              AventurAstur nace con el objetivo de fusionar el turismo activo
-              con la gran pantalla. Asturias ha sido escenario de innumerables
-              rodajes cinematográficos y televisivos a lo largo de los años.
-              Nuestro proyecto ofrece rutas y experiencias de ocio al aire libre
-              diseñadas para recorrer estos enclaves de película, permitiendo a
-              familias, amigos y entusiastas del cine vivir una aventura única
-              descubriendo los paisajes asturianos.
-            </p>
+          <h2>Inicio - El Proyecto</h2>
+          <div class="inicio-grid">
+            <div class="inicio-contenido">
+              <p>
+                AventurAstur nace con el objetivo de fusionar el turismo activo
+                con la gran pantalla. Asturias ha sido escenario de innumerables
+                rodajes cinematográficos y televisivos a lo largo de los años.
+                Nuestro proyecto ofrece rutas y experiencias de ocio al aire
+                libre diseñadas para recorrer estos enclaves de película,
+                permitiendo a familias, amigos y entusiastas del cine vivir una
+                aventura única descubriendo los paisajes asturianos.
+              </p>
+            </div>
+            <div class="inicio-extra">
+              <h3>¿Cómo son nuestras rutas?</h3>
+              <p>
+                Cada recorrido combina paseos por la costa y el interior con
+                paradas en escenarios reales de películas y series. Están
+                pensadas para hacer a tu ritmo, conectando naturaleza,
+                patrimonio y cultura audiovisual en distintos puntos de
+                Asturias.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -186,66 +198,91 @@
         <!-- APARTADO CONTACTO E INSCRIPCIÓN -->
         <section id="contacto" class="seccion-contacto">
           <h2>Contacto e Inscripción</h2>
-          <form class="form-contacto">
-            <p class="form-intro">
-              ¿Quieres apuntarte a nuestras experiencias o tienes alguna
-              consulta? Rellena el formulario de inscripción y nos pondremos en
-              contacto contigo.
-            </p>
+          <div class="contacto-grid">
+            <div class="contacto-form-col">
+              <form class="form-contacto">
+                <p class="form-intro">
+                  ¿Quieres apuntarte a nuestras experiencias o tienes alguna
+                  consulta? Rellena el formulario de inscripción y nos pondremos
+                  en contacto contigo.
+                </p>
 
-            <div class="form-group">
-              <label for="nombre">Nombre y Apellidos:</label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Ej. Ana García"
-                required
-              />
+                <div class="form-group">
+                  <label for="nombre">Nombre y Apellidos:</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ej. Ana García"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo Electrónico:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="correo@ejemplo.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="interes">Ruta o Actividad de Interés:</label>
+                  <select id="interes" name="interes">
+                    <option value="llanes">Llanes (Costa de Cine)</option>
+                    <option value="lastres">Lastres y Faro</option>
+                    <option value="gijon">Gijón Urbano</option>
+                    <option value="oviedo-aviles">Oviedo y Avilés</option>
+                    <option value="oriente">Cudillero y Covadonga</option>
+                    <option value="tapia">Tapia de Casariego</option>
+                    <option value="general">
+                      Información General / Inscripción general
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="mensaje"
+                    >Comentarios o Motivo de Inscripción:</label
+                  >
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="4"
+                    placeholder="Escribe aquí tu mensaje..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">
+                  Inscribirse / Enviar
+                </button>
+              </form>
             </div>
 
-            <div class="form-group">
-              <label for="email">Correo Electrónico:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="correo@ejemplo.com"
-                required
-              />
-            </div>
+            <div class="contacto-info-col">
+              <div class="info-contacto-bloque">
+                <h3>Atención directa</h3>
+                  <p class="telefono-destacado">
+                    ¿Tienes alguna consulta o aportación? Contáctanos a través de nuestro teléfono: 985661144
+                  </p>
+              </div>
 
-            <div class="form-group">
-              <label for="interes">Ruta o Actividad de Interés:</label>
-              <select id="interes" name="interes">
-                <option value="llanes">Llanes (Costa de Cine)</option>
-                <option value="lastres">Lastres y Faro</option>
-                <option value="gijon">Gijón Urbano</option>
-                <option value="oviedo-aviles">Oviedo y Avilés</option>
-                <option value="cudillero">
-                  Cudillero, Covadonga, Cangas de Onís, San Esteban
-                </option>
-                <option value="tapia">Tapia de Casariego</option>
-                <option value="general">
-                  Información General / Inscripción general
-                </option>
-              </select>
-            </div>
+              <div class="info-contacto-bloque">
+                <h3>Horario de consultas</h3>
+                  <p>Lunes a viernes: 09:30 - 14:00 y 16:30 - 19:30</p>
+                  <p>Sábados (salidas y rutas): 10:00 - 14:00</p>
+              </div>
 
-            <div class="form-group">
-              <label for="mensaje">Comentarios o Motivo de Inscripción:</label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                rows="4"
-                placeholder="Escribe aquí tu mensaje..."
-              ></textarea>
+              <div class="info-contacto-bloque">
+                <h3>Rutas por Asturias</h3>
+                  <p>
+                    Información sobre salidas a Llanes, Lastres, Gijón, Oviedo, Avilés, Oriente y Tapia de Casariego.
+                  </p>
+              </div>
             </div>
-
-            <button type="submit" class="btn-enviar">
-              Inscribirse / Enviar
-            </button>
-          </form>
         </section>
       </main>
 

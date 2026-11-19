@@ -114,6 +114,7 @@ body {
 }
 
 /* ESTILOS SECCIÓN INICIO (Debajo del vídeo) */
+
 .seccion-inicio {
   background-color: #606c38;
   border: 2px solid #dda15e;
@@ -132,10 +133,28 @@ body {
   border: 1px solid #dda15e;
 }
 
-.inicio-contenido p {
-  font-size: 0.85rem;
-  line-height: 1.5;
+.inicio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.inicio-contenido p,
+.inicio-extra p {
+  font-size: 0.8rem;
   color: #fefae0;
+}
+
+.inicio-extra {
+  background-color: #283618;
+  border: 1px solid #dda15e;
+  padding: 12px;
+}
+
+.inicio-extra h3 {
+  font-size: 0.9rem;
+  color: #dda15e;
+  margin-bottom: 6px;
 }
 
 /* ESTILOS SECCIÓN LOCALIZACIONES */
@@ -170,7 +189,6 @@ body {
   justify-content: space-between; /* Empuja el contenido uniformemente */
 }
 
-/* Forzamos una altura fija o mínima en el título para que todas las cajas midan exactamente lo mismo aunque tengan 1 o 2 líneas */
 .zona h2 {
   font-size: 1rem;
   background-color: #bc6c25;
@@ -233,7 +251,6 @@ body {
   border: none;
 }
 
-/* ESTILOS SECCIÓN CONTACTO / INSCRIPCIÓN */
 .seccion-contacto {
   margin-bottom: 12px;
 }
@@ -247,6 +264,12 @@ body {
   margin-bottom: 10px;
   font-weight: bold;
   border: 2px solid #dda15e;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .form-contacto {
@@ -283,6 +306,43 @@ body {
   background-color: #283618;
   color: #fefae0;
   border: 1px solid #dda15e;
+}
+
+.contacto-info-col {
+  background-color: #606c38;
+  border: 2px solid #dda15e;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.info-contacto-bloque {
+  background-color: #283618;
+  border: 1px solid #dda15e;
+  padding: 12px;
+  flex: 1; /* Hace que las 3 cajas se estiren por igual hasta igualar la altura del formulario */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-contacto-bloque h3 {
+  font-size: 0.9rem;
+  color: #dda15e;
+  margin-bottom: 6px;
+}
+
+.info-contacto-bloque p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #fefae0;
+  margin-bottom: 4px;
+}
+
+.telefono-destacado {
+  font-weight: bold;
 }
 
 .btn-enviar {
@@ -331,12 +391,17 @@ body {
 
 /* MEDIA QUERIES (Responsive) */
 
-/* BREAKPOINT: De 576px a 992px (2 columnas) */
+/* BREAKPOINT: De 576px a 992px */
 @media screen and (min-width: 576px) {
   .localizaciones {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+  }
+
+  .inicio-grid,
+  .contacto-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .footer-grid {
@@ -356,27 +421,11 @@ body {
   }
 }
 
-/* BREAKPOINT: Más de 992px (3 columnas) */
+/* BREAKPOINT: Más de 992px */
 @media screen and (min-width: 992px) {
   .localizaciones {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .footer-izq {
-    text-align: left;
-  }
-
-  .footer-centro {
-    text-align: center;
-  }
-
-  .footer-der {
-    justify-content: flex-end;
   }
 }
