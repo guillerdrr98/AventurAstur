@@ -40,7 +40,7 @@ body {
   filter: brightness(0.65); /* Oscurece el vídeo para que resalte el texto */
 }
 
-/* Barra superior flotante maquetada con Grid (Logo izquierda + Navbar derecha) */
+/* Barra superior flotante maquetada con Grid */
 .barra-superior {
   position: absolute;
   top: 25px;
