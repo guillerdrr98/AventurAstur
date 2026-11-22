@@ -279,7 +279,7 @@ body {
 .form-contacto {
   background-color: #606c38;
   border: 2px solid #dda15e;
-  height: 100%;
+  height: 100%; /* Iguala la altura de los dos contenedores de la zona de contacto */
   padding: 15px;
 }
 
