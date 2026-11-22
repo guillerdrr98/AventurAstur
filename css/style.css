@@ -179,7 +179,6 @@ body {
   gap: 12px;
 }
 
-/* Aseguramos que la tarjeta sea un contenedor flexible para alinear sus elementos */
 .zona {
   background-color: #606c38;
   border: 2px solid #dda15e;
@@ -218,7 +217,7 @@ body {
   width: 100%;
   object-fit: cover;
   display: block;
-  flex: 1; /* Si hay dos imágenes (ej. Oviedo/Avilés), se reparten el espacio 50% y 50% de forma automática */
+  flex: 1; /* Si hay dos imágenes se reparten el espacio 50% y 50% de forma automática */
 }
 
 .info h3 {
