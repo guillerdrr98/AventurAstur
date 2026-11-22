@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 340px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px;
@@ -391,6 +391,10 @@ body {
 
 /* BREAKPOINT: De 576px a 992px */
 @media screen and (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+
   .localizaciones {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -421,9 +425,20 @@ body {
 
 /* BREAKPOINT: Más de 992px */
 @media screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+
   .localizaciones {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
+  }
+}
+
+/* BREAKPOINT: Más de 1200px */
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
 }
