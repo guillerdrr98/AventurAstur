@@ -198,7 +198,7 @@ body {
   margin-bottom: 10px;
   font-weight: bold;
 
-  height: 52px; /* Altura suficiente para albergar 2 líneas de texto perfectamente */
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
