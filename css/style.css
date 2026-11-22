@@ -271,9 +271,15 @@ body {
   gap: 12px;
 }
 
+.contacto-form-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .form-contacto {
   background-color: #606c38;
   border: 2px solid #dda15e;
+  height: 100%;
   padding: 15px;
 }
 
