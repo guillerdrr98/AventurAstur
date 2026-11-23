@@ -66,6 +66,7 @@ body {
 
 .navbar ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   list-style: none;
 }
